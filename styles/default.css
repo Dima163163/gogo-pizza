@@ -1,4 +1,9 @@
 :root {
+  --white: #fff;
+  --beige: #c1ab91;
+  --dark: #2c2826;
+  --orange: #ff8a00;
+  --light: #fbf3e8;
   scroll-behavior: smooth;
 }
 
@@ -26,10 +31,9 @@ body {
   -webkit-tap-highlight-color: transparent;
   font-size: 16px;
   line-height: 1.5;
-  color: #2c2826;
-  background-color: #fbf3e8;
+  color: var(--dark);
+  background-color: var(--light);
 }
-
 
 img,
 svg {
@@ -41,7 +45,6 @@ svg {
 svg {
   max-height: 100%;
 }
-
 
 button {
   padding: 0;
@@ -83,7 +86,6 @@ iframe {
   transform: scale(0);
 }
 
-
 /*
 Пример контейнера
 
@@ -94,20 +96,18 @@ iframe {
 */
 
 .container {
-  max-width: 1432px;
-  padding: 0 66px;
+  --offset-container: 14px;
+  max-width: calc(var(--offset-container) * 2 + 1300px);
+  padding: 0 var(--offset-container);
   margin: 0 auto;
 }
 
+.svg-sprite {
+  display: none;
+}
 
-@media(max-width: 900px) {
+/* @media (max-width: 900px) {
   .container {
     padding: 0 44px;
   }
-}
-
-@media(max-width: 620px) {
-  .container {
-    padding: 0 16px;
-  }
-}
+} */

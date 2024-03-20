@@ -1,0 +1,67 @@
+.toppings {
+  padding: 24px 0;
+}
+
+.toppings__title {
+  position: fixed;
+  transform: scale(0);
+}
+
+.toppings__button {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--dark);
+}
+
+.toppings__arrow {
+  transition: transform 0.3s ease;
+}
+
+.toppings__button_active .toppings__arrow {
+  transform: scaleY(-1);
+}
+
+.toppings__list {
+  display: none;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.toppings__list_show {
+  display: flex;
+}
+
+.toppings__checkbox {
+  position: absolute;
+  appearance: none;
+}
+
+.toppings__label {
+  display: block;
+  border-radius: 32px;
+  padding: 8px 24px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--beige);
+  background: var(--white);
+  border: 1px solid transparent;
+}
+
+.toppings__checkbox:checked + .toppings__label {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.toppings__checkbox:focus-visible + .toppings__label {
+  background: var(--white);
+  border-color: var(--orange);
+  color: var(--orange);
+}
