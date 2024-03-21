@@ -106,8 +106,17 @@ iframe {
   display: none;
 }
 
-/* @media (max-width: 900px) {
+@media (width >= 620px) {
   .container {
-    padding: 0 44px;
+    --offset-container: 40px;
   }
-} */
+}
+
+@media (width >= 860px) {
+}
+
+@media (width >= 1140px) {
+  .container {
+    --offset-container: 70px;
+  }
+}

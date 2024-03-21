@@ -31,3 +31,22 @@
 
 .footer__link {
 }
+
+@media (width >= 620px) {
+  .footer {
+    padding: 64px 0 40px;
+  }
+
+  .footer__logo {
+    width: 400px;
+    margin-bottom: 64px;
+  }
+
+  .footer__copyright {
+    font-size: 20px;
+  }
+
+  .footer__developers {
+    font-size: 20px;
+  }
+}
