@@ -60,6 +60,8 @@ export const renderToppings = async () => {
     console.log(checkedToppings.length);
     if (checkedToppings.length) {
       toppingsList.append(itemReset);
+    } else {
+      itemReset.remove();
     }
 
     buttonReset.addEventListener('click', () => {
