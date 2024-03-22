@@ -8,6 +8,7 @@
 }
 
 html {
+  height: 100%;
   position: relative;
   box-sizing: border-box;
 }
@@ -19,6 +20,8 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   position: relative;
   overflow-x: hidden;
   min-width: 320px;
@@ -104,6 +107,10 @@ iframe {
 
 .svg-sprite {
   display: none;
+}
+
+main {
+  flex: 1 1 auto;
 }
 
 @media (width >= 620px) {

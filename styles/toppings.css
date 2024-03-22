@@ -43,7 +43,8 @@
   appearance: none;
 }
 
-.toppings__label {
+.toppings__label,
+.toppings__reset {
   display: block;
   border-radius: 32px;
   padding: 8px 24px;
@@ -53,10 +54,22 @@
   color: var(--beige);
   background: var(--white);
   border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.toppings__reset {
+  color: var(--orange);
+}
+
+.toppings__label:hover {
+  color: var(--orange);
 }
 
 .toppings__checkbox:checked + .toppings__label {
   background: var(--orange);
+  color: var(--white);
+}
+.toppings__checkbox:checked + .toppings__label:hover {
   color: var(--white);
 }
 
@@ -75,7 +88,8 @@
     font-size: 24px;
   }
 
-  .toppings__label {
+  .toppings__label,
+  .toppings__reset {
     font-size: 20px;
   }
 }
