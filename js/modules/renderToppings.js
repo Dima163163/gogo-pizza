@@ -1,4 +1,5 @@
 import {getData} from './getData.js';
+import {changeFirstUpperCase} from './helpers.js';
 import {renderPizzas} from './renderPizzas.js';
 
 export const renderToppings = async () => {
@@ -24,9 +25,7 @@ export const renderToppings = async () => {
     const label = document.createElement('label');
     label.classList.add('toppings__label');
     label.setAttribute('for', name);
-    label.textContent = `${ruToppings[i][0].toUpperCase()}${ruToppings[i]
-      .slice(1)
-      .toLowerCase()}`;
+    label.textContent = `${changeFirstUpperCase(ruToppings[i])}`;
 
     item.append(input, label);
     return item;

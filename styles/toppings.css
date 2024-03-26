@@ -56,24 +56,6 @@
   cursor: pointer;
 }
 
-.toppings__reset {
-  display: block;
-  border-radius: 32px;
-  padding: 8px 24px;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 140%;
-  color: var(--orange);
-  background: var(--white);
-  border: 1px solid transparent;
-  cursor: pointer;
-}
-
-.toppings__reset:hover {
-  color: var(--white);
-  background: var(--orange);
-}
-
 .toppings__label:hover {
   color: var(--orange);
 }
@@ -90,6 +72,24 @@
   background: var(--white);
   border-color: var(--orange);
   color: var(--orange);
+}
+
+.toppings__reset {
+  display: block;
+  border-radius: 32px;
+  padding: 8px 24px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--orange);
+  background: var(--white);
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.toppings__reset:hover {
+  color: var(--white);
+  background: var(--orange);
 }
 
 @media (width >= 620px) {

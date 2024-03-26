@@ -11,18 +11,16 @@
 
 .modal__main {
   cursor: default;
-  padding: 16px;
   background: var(--white);
   border-radius: 32px;
   margin: auto;
-}
-
-.modal-pizza__main {
-  max-width: 368px;
+  position: relative;
 }
 
 .modal__close {
   position: absolute;
   top: 16px;
   right: 16px;
+  width: 20px;
+  height: 20px;
 }

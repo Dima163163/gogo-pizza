@@ -1,4 +1,7 @@
 import {getData} from './getData.js';
+import {changeFirstUpperCase} from './helpers.js';
+import {modalController} from './modalController.js';
+import {renderModalPizza} from './renderModalPizza.js';
 
 const btnReset = document.createElement('button');
 btnReset.classList.add('pizza__reset-toppings');
@@ -17,11 +20,7 @@ const createCard = (data) => {
   </picture>
 
     <div class="card__content">
-      <h3 class="card__title">${data.name['ru'][0].toUpperCase()}${data.name[
-    'ru'
-  ]
-    .slice(1)
-    .toLowerCase()}</h3>
+      <h3 class="card__title">${changeFirstUpperCase(data.name['ru'])}</h3>
 
       <p class="card__info">
         <span class="card__price">${data.price['25cm']}₽</span>
@@ -60,6 +59,17 @@ export const renderPizzas = async (toppings) => {
     });
 
     pizzaList.append(...items);
+    modalController({
+      modal: '.modal-pizza',
+      btnOpen: '.card__button',
+      btnClose: '.modal__close',
+      async cbOpen(btnOpen) {
+        const pizza = await getData(
+          `https://go-go-pizza-api.onrender.com/api/products/${btnOpen.dataset.id}`
+        );
+        renderModalPizza(pizza);
+      },
+    });
   } else {
     pizzaTitle.textContent = 'Такой пиццы у нас нет :(';
     pizzaTitle.after(btnReset);
