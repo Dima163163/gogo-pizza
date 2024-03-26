@@ -4,5 +4,12 @@ export const cartControl = {
     this.cartData.push(product);
     localStorage.setItem('cart', JSON.stringify(this.cartData));
   },
-  removeCart() {},
+  removeCart(cartId) {
+    this.cartData = this.cartData.filter((item) => item.cartId !== cartId);
+    localStorage.setItem('cart', JSON.stringify(this.cartData));
+  },
+  clearCart() {
+    this.cartData = [];
+    localStorage.setItem('cart', JSON.stringify(this.cartData));
+  },
 };

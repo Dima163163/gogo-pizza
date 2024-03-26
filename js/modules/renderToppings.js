@@ -11,7 +11,6 @@ export const renderToppings = async () => {
   toppingsList.textContent = '';
 
   const items = enToppings.map((name, i) => {
-    console.log('data: ', name);
     const item = document.createElement('li');
     item.classList.add('toppings__item');
 
